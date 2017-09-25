@@ -1,0 +1,32 @@
+<h1>Edit Information:</h1>
+
+<%= form_for @user do |f| %> 
+    <%= f.label :name, 'Name' %>
+    <br />
+    <%= f.text_field :name, {placeholder: @user.name} %> 
+    <br />
+    <%= f.label :email, 'Email' %>
+    <br />
+    <%= f.text_field :email, {placeholder: @user.email} %> 
+    <br />
+    <%= f.label :password, 'Password' %>
+    <br />
+    <%= f.password_field :password, {placeholder: "Change Password"} %> 
+    <br />
+    <%= f.label :age, 'Age' %>
+    <br />
+    <%= f.number_field :age, {placeholder: @user.age} %> 
+    <br />
+    <%= f.label :height, 'Height' %>
+    <br />
+    <%= f.number_field :height, {placeholder: "Enter your current height"} %> 
+    <br />
+    <%= f.label :weight, 'Weight' %>
+    <br />
+    <%= f.number_field :weight, {placeholder: "Enter your current weight"} %> 
+    <br />
+<%= f.submit "Update Information" %> 
+<% end %> 
+
+<%= link_to "Delete Account", user_path, method: 'delete' %> 
+
