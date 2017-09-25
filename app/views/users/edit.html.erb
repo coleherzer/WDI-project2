@@ -13,6 +13,10 @@
     <br />
     <%= f.password_field :password, {placeholder: "Change Password"} %> 
     <br />
+    <%= f.label :password_confirmation, "Confirm Password" %>
+    <br />
+    <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
+    <br />
     <%= f.label :age, 'Age' %>
     <br />
     <%= f.number_field :age, {placeholder: @user.age} %> 
@@ -27,6 +31,10 @@
     <br />
 <%= f.submit "Update Information" %> 
 <% end %> 
+
+<%= link_to "Cancel", user_path(@user) %> 
+
+<br />
 
 <%= link_to "Delete Account", user_path, method: 'delete' %> 
 
