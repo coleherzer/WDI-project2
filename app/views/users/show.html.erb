@@ -43,6 +43,22 @@
 
 <%= link_to "Add Dietary Information", new_diet_path %>
 
+<h3>Goals:</h3>
+<ul>
+    <% @user.goals.each do |g| %>
+        <li><%= g.goal_type %>
+            <ul>
+                <li>Description: <%= g.description %></li>
+                <li>Goal Status: <%= g.completed %></li>
+                <li><%= link_to "Edit Goal", edit_goal_path(g.id) %></li>
+            </ul>
+        </li>
+    <% end %> 
+</ul>
+
+<%= link_to "Add a Goal", new_goal_path %> 
+
+<br />
 <br />
 
 <%= link_to "Log Out", logout_path, method: "delete" %> 

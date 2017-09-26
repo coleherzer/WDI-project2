@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :exercises
 
   resources :diets
+
+  resources :goals
   
 end

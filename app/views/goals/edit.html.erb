@@ -1,2 +1,23 @@
-<h1>Goals#edit</h1>
-<p>Find me in app/views/goals/edit.html.erb</p>
+<h1>Edit Goal:</h1>
+
+<%= form_for @goal do |f| %>
+    <%= f.label :goal_type, "Type of Goal (Long Term? Fitness? Dietary?" %>
+    <br />
+    <%= f.text_field :goal_type, {placeholder: "Enter goal type here"} %> 
+    <br />
+    <%= f.label :description, "Description of Goal" %>
+    <br />
+    <%= f.text_field :description, {placeholder: "Add brief description here"} %> 
+    <br />
+    <%= f.label :completed, "Have you completed this goal?" %>
+    <br />
+    <%= f.text_field :completed, {placeholder: "True or False"} %> 
+    <br />
+    <%= f.submit "Update Goal Info" %>
+<% end %> 
+
+<%= link_to "Cancel", user_path(@user) %> 
+
+<br />
+
+<%= link_to "Delete Goal", goal_path, method: 'delete' %> 
