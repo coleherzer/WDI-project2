@@ -17,6 +17,7 @@
                 <li>Duration of Exercise: <%= e.duration %> minutes</li>
                 <li>Distance Traveled: <%= e.distance %> miles</li>
                 <li>Number of Repititions: <%= e.repititions %> reps</li>
+                <li><%= link_to "Edit Exercise", edit_exercise_path(e.id) %></li>
             </ul>
         </li>
     <% end %> 
