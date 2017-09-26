@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize, only: [:show, :edit, :update, :destroy]
+
   def index
     @user = User.all
   end
@@ -14,8 +16,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
     else 
+      flash[:danger] = "Please Check All Fields"
       redirect_to new_user_path
     end
   end
@@ -40,8 +44,15 @@ class UsersController < ApplicationController
     end
   end
 
+  # def destroy
+  #   current_user.destroy
+  #   session[:user_id] = nil
+  #   redirect_to root_path
+  #   # delete the user, then clear the sesssion, then redirect
+  # end
+
   private 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :age, :height, :weight)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :age, :height, :weight)
   end
 end
