@@ -27,4 +27,22 @@
 
 <br />
 
+<h3>Diet:</h3>
+<ul>
+    <% @user.diets.each do |d| %>
+        <li><%= d.meal_name %>
+            <ul>
+                <li>Calories (If known): <%= d.calories %> calories</li>
+                <li>Healthy meal: <%= d.healthy %></li>
+                <li>Meal Description: <%= d.description %></li>
+                <li><%= link_to "Edit Meal", edit_diet_path(d.id) %></li>
+            </ul>
+        </li>
+    <% end %> 
+</ul>
+
+<%= link_to "Add Dietary Information", new_diet_path %>
+
+<br />
+
 <%= link_to "Log Out", logout_path, method: "delete" %> 

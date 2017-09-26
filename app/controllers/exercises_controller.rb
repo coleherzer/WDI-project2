@@ -1,7 +1,5 @@
 class ExercisesController < ApplicationController
   def index
-    @exercises = Exercise.all
-    #probably won't need this
   end
 
   def show
@@ -22,9 +20,6 @@ class ExercisesController < ApplicationController
     @exercise.calories_burned = params[:exercise][:calories_burned]
     @user = current_user
     @exercise.user = @user
-    # Need to go in and create the log in/out sessions aspect of the app
-    # and then come back to the above two lines to reference
-    # current_user and assign the exercise to the current user
     if @exercise.save
       redirect_to user_path(@user)
     else
@@ -33,8 +28,8 @@ class ExercisesController < ApplicationController
   end
 
   def edit
-    # @exercise = current_user.exercises.find(params[:id])
     @exercise = Exercise.find(params[:id])
+    @user = current_user
   end
 
   def update
