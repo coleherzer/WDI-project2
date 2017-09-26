@@ -37,19 +37,19 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    @user = User.find(params[:id])
-    if @user.destroy 
-      redirect_to root_path
-    end
-  end
-
   # def destroy
-  #   current_user.destroy
-  #   session[:user_id] = nil
-  #   redirect_to root_path
-  #   # delete the user, then clear the sesssion, then redirect
+  #   @user = User.find(params[:id])
+  #   if @user.destroy 
+  #     redirect_to root_path
+  #   end
   # end
+
+  def destroy
+    current_user.destroy
+    session[:user_id] = nil
+    redirect_to root_path
+    # delete the user, then clear the sesssion, then redirect
+  end
 
   private 
   def user_params
