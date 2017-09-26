@@ -1,2 +1,34 @@
-<h1>Exercises#new</h1>
-<p>Find me in app/views/exercises/new.html.erb</p>
+<h1>Add an Exercise to your page!</h1>
+<p>Enter 0 for categories that don't apply to the exercise!</p>
+
+<%= form_for @exercise do |f| %>
+    <%= f.label :name_of_exercise, "Name of Exercise" %>
+    <br />
+    <%= f.text_field :name_of_exercise %> 
+    <br />
+    <%= f.label :exercise_category, "Type of Exercise (Ex: Cardio)" %>
+    <br />
+    <%= f.text_field :exercise_category %> 
+    <br />
+    <%= f.label :calories_burned, "Calories Burned (If known)" %>
+    <br />
+    <%= f.number_field :calories_burned, {placeholder: ""} %> 
+    <br />
+    <%= f.label :duration, "Time spent doing Exercise" %>
+    <br />
+    <%= f.number_field :duration, {placeholder: "Enter minutes"}%> 
+    <br />
+    <%= f.label :distance, "Distance covered" %>
+    <br />
+    <%= f.number_field :distance, {placeholder: "Enter miles"} %> 
+    <br />
+    <%= f.label :repititions, "Number of Repititions" %>
+    <br />
+    <%= f.number_field :repititions, {placeholder: "Enter # of Repititions"} %> 
+    <br />
+    <%= f.submit "Add Exercise" %> 
+    <br />
+<% end %> 
+
+
+

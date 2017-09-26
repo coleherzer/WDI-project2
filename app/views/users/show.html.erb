@@ -6,3 +6,20 @@
 <p>Current Weight: <%= @user.weight %> pounds</p>
 
 <%= link_to "Edit Information", edit_user_path %>
+
+<h3>Exercises:</h3>
+<ul>
+    <% @user.exercises.each do |e| %>
+        <li><%= e.name_of_exercise %>
+            <ul>
+                <li>Type of Exercise: <%= e.exercise_category %></li>
+                <li>Calories Burned (If known): <%= e.calories_burned %> calories</li>
+                <li>Duration of Exercise: <%= e.duration %> minutes</li>
+                <li>Distance Traveled: <%= e.distance %> miles</li>
+                <li>Number of Repititions: <%= e.repititions %> reps</li>
+            </ul>
+        </li>
+    <% end %> 
+</ul>
+
+<%= link_to "Add an Exercise", new_exercise_path %> 
