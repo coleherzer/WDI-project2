@@ -1,1 +1,32 @@
 @import "bootstrap";
+
+.calendar-heading {
+    text-align: center; 
+}
+
+.calendar-title {
+    font-size: 1.5rem;
+}
+
+.table td {
+    padding: 5px 70px 70px 10px; 
+}
+
+.today {
+    background: #4BC55B;
+}
+
+// .past {
+//     background: #3B3B3B;
+// }
+
+.prev-month {
+    background: #353535;
+    color: white;
+}
+
+.next-month {
+    background: #353535;
+    color: white; 
+}
+
