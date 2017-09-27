@@ -16,19 +16,27 @@
 <%# end %> -->
 
 <%= month_calendar attribute: :time_done, events: @exercises do |date, exercises| %>
-    <%= date %>
+    <%= date.day %>
+    <% diets = Diet.where meal_time: date %>
+    <% goals = Goal.where due_date: date %>
 
     <% exercises.each do |e| %>
-        <div class="exercises">
+        <p class="exercises">
             <%= e.name_of_exercise %>
-        </div>
+        </p>
     <% end %>
     <!-- As the items are appended to a day, it increases the space that day takes up -->
-    <!-- <%# diets.each do |d| %>
-    <div class="diets">
-        <%# d.meal_name %>
-    </div>
-    <%# end %> -->
+    <% diets.each do |d| %>
+        <p class="diets">
+            <%= d.meal_name %>
+        </p>
+    <% end %>
+    <% goals.each do |g| %>
+        <p class="goals">
+            <%# g.goal_type %>
+            Goal
+        </p>
+    <% end %>
 <% end %>
 
 <br />
