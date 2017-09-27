@@ -16,6 +16,7 @@ class GoalsController < ApplicationController
     @goal.goal_type = params[:goal][:goal_type]
     @goal.description = params[:goal][:description]
     @goal.completed = params[:goal][:completed]
+    @goal.due_date = params[:goal][:due_date]
     @user = current_user
     @goal.user = @user
     if @goal.save
@@ -50,6 +51,6 @@ class GoalsController < ApplicationController
 
   private
   def goal_params
-    params.require(:goal).permit(:goal_type, :description, :completed)
+    params.require(:goal).permit(:goal_type, :description, :completed, :due_date)
   end
 end

@@ -1,7 +1,7 @@
 <h1>Goals are good! Add a goal to your page!</h1>
 
 <%= form_for @goal do |f| %>
-    <%= f.label :goal_type, "Type of Goal (Long Term? Fitness? Dietary?" %>
+    <%= f.label :goal_type, "Type of Goal (Long Term? Fitness? Dietary?)" %>
     <br />
     <%= f.text_field :goal_type, {placeholder: "Enter goal type here"} %> 
     <br />
@@ -12,6 +12,10 @@
     <%= f.label :completed, "Have you completed this goal?" %>
     <br />
     <%= f.text_field :completed, {placeholder: "True or False"} %> 
+    <br />
+    <%= f.label :due_date, "Set a due date for this goal" %>
+    <br />
+    <%= f.date_field :due_date, {placeholder: "Date"} %> 
     <br />
     <%= f.submit "Create Goal" %>
 <% end %> 

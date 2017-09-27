@@ -27,6 +27,10 @@
     <br />
     <%= f.number_field :repititions, {placeholder: "Enter # of Repititions"} %> 
     <br />
+    <%= f.label :time_done, "When did you do this exercise?" %>
+    <br />
+    <%= f.date_field :time_done, {placeholder: "Date"} %> 
+    <br />
     <%= f.submit "Update Exercise Info" %> 
     <br />
 <% end %> 

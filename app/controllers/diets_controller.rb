@@ -16,6 +16,7 @@ class DietsController < ApplicationController
     @diet.calories = params[:diet][:calories]
     @diet.healthy = params[:diet][:healthy]
     @diet.description = params[:diet][:description]
+    @diet.meal_time = params[:diet][:meal_time]
     @user = current_user
     @diet.user = @user
     if @diet.save
@@ -50,6 +51,6 @@ class DietsController < ApplicationController
 
   private
   def diet_params
-    params.require(:diet).permit(:meal_name, :calories, :description, :healthy)
+    params.require(:diet).permit(:meal_name, :calories, :description, :healthy, :meal_time)
   end
 end

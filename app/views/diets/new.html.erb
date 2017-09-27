@@ -17,5 +17,9 @@
     <br />
     <%= f.text_field :description, {placeholder: "What'd you eat?"} %> 
     <br />
+    <%= f.label :meal_time, "When did you eat this meal?" %>
+    <br />
+    <%= f.date_field :meal_time, {placeholder: "Date"} %> 
+    <br />
     <%= f.submit "Add to log" %>
 <% end %> 

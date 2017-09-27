@@ -10,8 +10,24 @@
 <br />
 
 <h3>Health Calendar:</h3>
-<%= month_calendar do |date| %>
+<!-- <%# month_calendar do |date| %>
+    <%# date %>
+<%# end %> -->
+
+<%= month_calendar attribute: :time_done, events: @exercises do |date, exercises| %>
     <%= date %>
+
+    <% exercises.each do |e| %>
+        <div class="exercises">
+            <%= e.name_of_exercise %>
+        </div>
+    <% end %>
+    <!-- As the items are appended to a day, it increases the space that day takes up -->
+    <!-- <%# diets.each do |d| %>
+    <div class="diets">
+        <%# d.meal_name %>
+    </div>
+    <%# end %> -->
 <% end %>
 
 <br />
