@@ -29,6 +29,10 @@
     <br />
     <%= f.number_field :weight, {placeholder: "Enter your current weight"} %> 
     <br />
+    <%= f.label :start_weight, 'Weight before you started working out' %>
+    <br />
+    <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
+    <br />
 <%= f.submit "Update Information" %> 
 <% end %> 
 

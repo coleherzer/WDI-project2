@@ -29,6 +29,13 @@
     <br />
     <%= f.number_field :weight, {placeholder: "Enter current weight"} %> 
     <br />
+    <%= f.label :start_weight, 'Weight before you started working out' %>
+    <br />
+    <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
+    <br />
     <%= f.submit "Create Account!" %> 
 <% end %> 
+
+<!-- find a way to make it so instead of specifying their start weight, users current weight will
+be saved as their start weight automatically -->
 
