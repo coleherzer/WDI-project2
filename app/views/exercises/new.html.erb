@@ -1,42 +1,44 @@
-<h1>Add an Exercise to your page!</h1>
-<p>Leave sections blank if you don't know the information, or the information doesn't apply to your particular exercise!</p>
+<div class="container">
 
-<%= form_for @exercise do |f| %>
-    <%= f.label :name_of_exercise, "Name of Exercise" %>
-    <br />
-    <%= f.text_field :name_of_exercise, {placeholder: "Enter a name for the Exercise"} %> 
-    <br />
-    <%= f.label :exercise_category, "Type of Exercise (Ex: Cardio)" %>
-    <br />
-    <%= f.text_field :exercise_category, {placeholder: "Exercise category"} %> 
-    <br />
-    <%= f.label :calories_burned, "Calories Burned (If known)" %>
-    <br />
-    <%= f.number_field :calories_burned, {placeholder: "Known Calories Burned"} %> 
-    <br />
-    <%= f.label :duration, "Time spent doing Exercise" %>
-    <br />
-    <%= f.number_field :duration, {placeholder: "Enter minutes"}%> 
-    <br />
-    <%= f.label :distance, "Distance covered" %>
-    <br />
-    <%= f.number_field :distance, {placeholder: "Enter miles"} %> 
-    <br />
-    <%= f.label :repititions, "Number of Repititions" %>
-    <br />
-    <%= f.number_field :repititions, {placeholder: "Enter # of Repititions"} %> 
-    <br />
-    <%= f.label :weight, "Weight Used for Exercise" %>
-    <br />
-    <%= f.number_field :weight, {placeholder: "Weight (pounds)"} %> 
-    <br />
-    <%= f.label :time_done, "When did you do this exercise?" %>
-    <br />
-    <%= f.date_field :time_done, {placeholder: "Date"} %> 
-    <br />
-    <%= f.submit "Add Exercise" %> 
-    <br />
-<% end %> 
+    <h1>Add an Exercise to your page!</h1>
+    <p>Leave sections blank if you don't know the information, or the information doesn't apply to your particular exercise!</p>
 
+    <%= form_for @exercise do |f| %>
+        <%= f.label :name_of_exercise, "Name of Exercise" %>
+        <br />
+        <%= f.text_field :name_of_exercise, {placeholder: "Enter a name for the Exercise"} %> 
+        <br />
+        <%= f.label :exercise_category, "Type of Exercise (Ex: Cardio)" %>
+        <br />
+        <%= f.text_field :exercise_category, {placeholder: "Exercise category"} %> 
+        <br />
+        <%= f.label :calories_burned, "Calories Burned (If known)" %>
+        <br />
+        <%= f.number_field :calories_burned, {placeholder: "Known Calories Burned"} %> 
+        <br />
+        <%= f.label :duration, "Time spent doing Exercise" %>
+        <br />
+        <%= f.number_field :duration, {placeholder: "Enter minutes"}%> 
+        <br />
+        <%= f.label :distance, "Distance covered" %>
+        <br />
+        <%= f.number_field :distance, {placeholder: "Enter miles"} %> 
+        <br />
+        <%= f.label :repititions, "Number of Repititions" %>
+        <br />
+        <%= f.number_field :repititions, {placeholder: "Enter # of Repititions"} %> 
+        <br />
+        <%= f.label :weight, "Weight Used for Exercise" %>
+        <br />
+        <%= f.number_field :weight, {placeholder: "Weight (pounds)"} %> 
+        <br />
+        <%= f.label :time_done, "When did you do this exercise?" %>
+        <br />
+        <%= f.date_field :time_done, {placeholder: "Date"} %> 
+        <br />
+        <%= f.submit "Add Exercise" %> 
+        <br />
+    <% end %> 
 
+</div>
 

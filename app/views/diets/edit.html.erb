@@ -1,32 +1,36 @@
-<h1>Edit meal:</h1>
-<p>Blank sections will not be displayed!</p>
+<div class="container">
 
-<%= form_for @diet do |f| %>
-    <%= f.label :meal_name, "Meal Name*" %>
-    <br />
-    <%= f.text_field :meal_name, {placeholder: "Breakfast? Snack?"} %> 
-    <br />
-    <%= f.label :description, "Brief Description*" %>
-    <br />
-    <%= f.text_field :description, {placeholder: "What'd you eat?"} %> 
-    <br />
-    <%= f.label :meal_time, "When did you eat this meal?" %>
-    <br />
-    <%= f.date_field :meal_time, {placeholder: "Date"} %> 
-    <br />
-    <%= f.label :calories, "Calories (If known) Enter 0 if unknown" %>
-    <br />
-    <%= f.number_field :calories, {placeholder: "Calories Consumed"} %> 
-    <br />
-    <%= f.label :healthy, "Do you consider this a healthy meal? (True or False)" %>
-    <br />
-    <%= f.text_field :healthy, {placeholder: "True or False"} %> 
-    <br />
-    <%= f.submit "Update" %>
-<% end %> 
+    <h1>Edit meal:</h1>
+    <p>Blank sections will not be displayed!</p>
 
-<%= link_to "Cancel", user_path(@user) %> 
+    <%= form_for @diet do |f| %>
+        <%= f.label :meal_name, "Meal Name*" %>
+        <br />
+        <%= f.text_field :meal_name, {placeholder: "Breakfast? Snack?"} %> 
+        <br />
+        <%= f.label :description, "Brief Description*" %>
+        <br />
+        <%= f.text_field :description, {placeholder: "What'd you eat?"} %> 
+        <br />
+        <%= f.label :meal_time, "When did you eat this meal?" %>
+        <br />
+        <%= f.date_field :meal_time, {placeholder: "Date"} %> 
+        <br />
+        <%= f.label :calories, "Calories (If known) Enter 0 if unknown" %>
+        <br />
+        <%= f.number_field :calories, {placeholder: "Calories Consumed"} %> 
+        <br />
+        <%= f.label :healthy, "Do you consider this a healthy meal? (True or False)" %>
+        <br />
+        <%= f.text_field :healthy, {placeholder: "True or False"} %> 
+        <br />
+        <%= f.submit "Update" %>
+    <% end %> 
 
-<br />
+    <%= link_to "Cancel", user_path(@user) %> 
 
-<%= link_to "Delete Meal", diet_path, method: 'delete' %>
+    <br />
+
+    <%= link_to "Delete Meal", diet_path, method: 'delete' %>
+
+</div>

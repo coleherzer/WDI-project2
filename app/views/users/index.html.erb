@@ -1,19 +1,23 @@
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container index-jumbo">
         <h1 class="display-3">Welcome to Health Tracker!</h1>
-        <p class="lead">A simple web app that gives users the ability to log important health information on their own personal calendar.</p>
-        <hr class="my-4">
+        <p class="lead">A simple web app that gives users the ability to log important health information on their own personal calendar</p>
+        <!-- <hr class="my-4"> -->
 
-        <div class="jumbo-link">
-            <%= link_to "Create an Account", new_user_path %>
-        </div>  
+        <div class="links">
+            <div class="jumbo-link">
+                <%= link_to "Create an Account", new_user_path %>
+            </div>  
 
+            <br />
+
+            <div class="jumbo-link">
+                <%= link_to "Sign In", new_session_path %> 
+            </div>
+        </div> 
+<!-- 
         <br />
 
-        <div class="jumbo-link">
-            <%= link_to "Sign In", new_session_path %> 
-        </div>
-
-        <br />
-
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+    </div>
 </div>

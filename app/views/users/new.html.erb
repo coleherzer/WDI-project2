@@ -1,41 +1,42 @@
-<h1>Create a new account:</h1>
+<div class="container">
+    <h1>Create a new account:</h1>
 
-<%= form_for @user do |f| %> 
-    <%= f.label :name, 'Name' %>
-    <br />
-    <%= f.text_field :name, {placeholder: "Enter Name"} %> 
-    <br />
-    <%= f.label :email, 'Email' %>
-    <br />
-    <%= f.text_field :email, {placeholder: "Enter Email"} %> 
-    <br />
-    <%= f.label :password, 'Password' %>
-    <br />
-    <%= f.password_field :password, {placeholder: "Enter Password"} %> 
-    <br />
-    <%= f.label :password_confirmation, "Confirm Password" %>
-    <br />
-    <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
-    <br />
-    <%= f.label :age, 'Age' %>
-    <br />
-    <%= f.number_field :age, {placeholder: "Enter Current Age"} %> 
-    <br />
-    <%= f.label :height, 'Height' %>
-    <br />
-    <%= f.number_field :height, {placeholder: "Enter current height"} %> 
-    <br />
-    <%= f.label :weight, 'Weight' %>
-    <br />
-    <%= f.number_field :weight, {placeholder: "Enter current weight"} %> 
-    <br />
-    <%= f.label :start_weight, 'Weight before you started working out' %>
-    <br />
-    <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
-    <br />
-    <%= f.submit "Create Account!" %> 
-<% end %> 
+    <%= form_for @user do |f| %> 
+        <%= f.label :name, 'Name' %>
+        <br />
+        <%= f.text_field :name, {placeholder: "Enter Name"} %> 
+        <br />
+        <%= f.label :email, 'Email' %>
+        <br />
+        <%= f.text_field :email, {placeholder: "Enter Email"} %> 
+        <br />
+        <%= f.label :password, 'Password' %>
+        <br />
+        <%= f.password_field :password, {placeholder: "Enter Password"} %> 
+        <br />
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <br />
+        <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
+        <br />
+        <%= f.label :age, 'Age' %>
+        <br />
+        <%= f.number_field :age, {placeholder: "Enter Current Age"} %> 
+        <br />
+        <%= f.label :height, 'Height' %>
+        <br />
+        <%= f.number_field :height, {placeholder: "Enter current height"} %> 
+        <br />
+        <%= f.label :weight, 'Weight' %>
+        <br />
+        <%= f.number_field :weight, {placeholder: "Enter current weight"} %> 
+        <br />
+        <%= f.label :start_weight, 'Weight before you started working out' %>
+        <br />
+        <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
+        <br />
+        <%= f.submit "Create Account!" %> 
+    <% end %> 
 
-<!-- find a way to make it so instead of specifying their start weight, users current weight will
-be saved as their start weight automatically -->
-
+    <!-- find a way to make it so instead of specifying their start weight, users current weight will
+    be saved as their start weight automatically -->
+</div>

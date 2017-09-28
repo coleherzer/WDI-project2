@@ -39,12 +39,26 @@
 // }
 
 .jumbotron {
-    height: 100%;
-    background: #A80606;
-    border-radius: 2rem; 
-    margin-top: 3rem; 
+    background: url(https://goo.gl/oQ8x5N);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    // background: #A80606;
+    // opacity: 0.5;
+    // border-radius: 2rem; 
+    // margin-top: 3rem; 
 }
 
 .jumbo-link {
     font-size: 1.5rem; 
+}
+
+.index-jumbo {
+    font-weight: bold;
+}
+
+.links {
+    margin-top: 4rem; 
 }
