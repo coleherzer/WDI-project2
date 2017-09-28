@@ -1,0 +1,74 @@
+<h1>Log for: <%= @date.month %>/<%= @date.day %>/<%= @date.year %></h1>
+
+<h3>Exercises:</h3>
+<%= link_to "Add an Exercise", new_exercise_path %>
+<ul>
+    <% @exercises.each do |e| %>
+        <li><%= e.name_of_exercise %>
+            <ul>
+                <li>Type of Exercise: <%= e.exercise_category %></li>
+                <% if (e.calories_burned != nil) %> 
+                    <li>Calories Burned (If known): <%= e.calories_burned %> calories</li>
+                <% end %> 
+                <% if (e.duration != nil) %> 
+                    <li>Duration of Exercise: <%= e.duration %> minutes</li>
+                <% end %>
+                <% if (e.distance != nil) %> 
+                    <li>Distance Traveled: <%= e.distance %> miles</li>
+                <% end %> 
+                <% if (e.repititions != nil) %> 
+                    <li>Number of Repititions: <%= e.repititions %> reps</li>
+                <% end %> 
+                <% if (e.weight != nil) %> 
+                    <li>Weight: <%= e.weight %> pounds</li>
+                <% end %> 
+                <li><%= link_to "Edit Exercise", edit_exercise_path(e.id) %></li>
+            </ul>
+        </li>
+    <% end %> 
+</ul> 
+
+<br />
+
+<h3>Diet:</h3>
+<%= link_to "Add Dietary Information", new_diet_path %>
+<ul>
+    <% @diets.each do |d| %>
+        <li><%= d.meal_name %>
+            <ul>
+                <li>Description: <%= d.description %></li>
+                <% if (d.calories != nil) %> 
+                    <li>Calories (If known): <%= d.calories %> calories</li>
+                <% end %> 
+                <% if (d.healthy != nil) %> 
+                    <% if (d.healthy == true) %>
+                        <li>Healthy Meal: Yes</li>
+                    <% else %> 
+                        <li>Healthy Meal: No</li>
+                    <% end %> 
+                <% end %> 
+                <li><%= link_to "Edit Meal", edit_diet_path(d.id) %></li>
+            </ul>
+        </li>
+    <% end %>
+</ul>
+
+<h3>Goals:</h3>
+<%= link_to "Add a Goal", new_goal_path %>
+<ul>
+    <% @goals.each do |g| %>
+        <li><%= g.goal_type %>
+            <ul>
+                <li>Description: <%= g.description %></li>
+                <% if (g.completed != nil) %> 
+                    <% if (g.completed == true) %>
+                        <li>Goal Status: Completed</li>
+                    <% else %> 
+                        <li>Goal Status: Incomplete</li>
+                    <% end %> 
+                <% end %> 
+                <li><%= link_to "Edit Goal", edit_goal_path(g.id) %></li>
+            </ul>
+        </li>
+    <% end %> 
+</ul> 

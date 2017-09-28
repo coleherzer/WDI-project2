@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   resources :diets
 
   resources :goals
+
+  # need to add routes for the days controller
+
+  get '/day' => 'days#show'
   
 end
