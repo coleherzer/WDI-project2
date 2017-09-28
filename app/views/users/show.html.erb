@@ -51,16 +51,19 @@
             <ul>
                 <li>Type of Exercise: <%= e.exercise_category %></li>
                 <% if (e.calories_burned != nil) %> 
-                <li>Calories Burned (If known): <%= e.calories_burned %> calories</li>
+                    <li>Calories Burned (If known): <%= e.calories_burned %> calories</li>
                 <% end %> 
                 <% if (e.duration != nil) %> 
                     <li>Duration of Exercise: <%= e.duration %> minutes</li>
                 <% end %>
                 <% if (e.distance != nil) %> 
-                <li>Distance Traveled: <%= e.distance %> miles</li>
+                    <li>Distance Traveled: <%= e.distance %> miles</li>
                 <% end %> 
                 <% if (e.repititions != nil) %> 
-                <li>Number of Repititions: <%= e.repititions %> reps</li>
+                    <li>Number of Repititions: <%= e.repititions %> reps</li>
+                <% end %> 
+                <% if (e.weight != nil) %> 
+                    <li>Weight: <%= e.weight %> pounds</li>
                 <% end %> 
                 <li><%= link_to "Edit Exercise", edit_exercise_path(e.id) %></li>
             </ul>
@@ -90,7 +93,7 @@
                 <li><%= link_to "Edit Meal", edit_diet_path(d.id) %></li>
             </ul>
         </li>
-    <% end %> 
+    <% end %>
 </ul>
 
 <h3>Goals:</h3>

@@ -27,6 +27,10 @@
     <br />
     <%= f.number_field :repititions, {placeholder: "Enter # of Repititions"} %> 
     <br />
+    <%= f.label :weight, "Weight Used for Exercise" %>
+    <br />
+    <%= f.number_field :weight, {placeholder: "Weight (pounds)"} %> 
+    <br />
     <%= f.label :time_done, "When did you do this exercise?" %>
     <br />
     <%= f.date_field :time_done, {placeholder: "Date"} %> 
