@@ -1,18 +1,18 @@
 <div class="container">
 
-    <h1><%= @user.name %>'s Personal Health Page</h1>
+    <h1 class="user-name"><%= @user.name %>'s Personal Health Page</h1>
 
-    <p>Age: <%= @user.age %></p>
-    <p>Email: <%= @user.email %></p>
-    <p>Current Height: <%= @user.height %> inches</p>
-    <p>Start Weight: <%= @user.start_weight %> pounds</p>
-    <p>Current Weight: <%= @user.weight %> pounds</p>
+    <p class="user-info">Age: <%= @user.age %></p>
+    <p class="user-info">Email: <%= @user.email %></p>
+    <p class="user-info">Current Height: <%= @user.height %> inches</p>
+    <p class="user-info">Start Weight: <%= @user.start_weight %> pounds</p>
+    <p class="user-info">Current Weight: <%= @user.weight %> pounds</p>
 
     <%= link_to "Edit Information", edit_user_path %>
 
     <br />
 
-    <h3>Health Calendar:</h3>
+    <h3 class="user-calendar">Health Calendar:</h3>
     <!-- <%# month_calendar do |date| %>
         <%# date %>
     <%# end %> -->
@@ -22,23 +22,23 @@
         <% diets = Diet.where meal_time: date %>
         <% goals = Goal.where due_date: date %>
 
-        <% exercises.each do |e| %>
-            <p class="exercises">
-                <%= e.name_of_exercise %>
-            </p>
+        <!-- set it up so that if exercise info exists... Display a little icon (same for diets and goals)
+        use the same code but do and if exercises.count > 0 do ... and instead of creating a p, create an icon -->
+        <% if (exercises.count > 0) %>
+            <div>Exercise</div>
         <% end %>
-        <!-- As the items are appended to a day, it increases the space that day takes up -->
-        <% diets.each do |d| %>
-            <p class="diets">
-                <%= d.meal_name %>
-            </p>
+        <% if (diets.count > 0) %>
+            <div>Diet</div>
         <% end %>
-        <% goals.each do |g| %>
+        <% if (goals.count > 0) %>
+            <div>Goal</div>
+        <% end %>
+        <!-- <%# goals.each do |g| %>
             <p class="goals">
                 <%# g.goal_type %>
                 Goal
             </p>
-        <% end %>
+        <%# end %> -->
     <% end %>
 
     <br />

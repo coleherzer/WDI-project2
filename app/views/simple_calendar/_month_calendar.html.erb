@@ -23,10 +23,7 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &block) %>
               <% else %>
                 <% block.call day, sorted_events.fetch(day, []) %>
-                <%# exercises = Exercise.where time_done: day %>
-                <%# diets = Diet.where meal_time: day %>
-                <%# goals = Goal.where due_date: day %>
-                <%= link_to "See Info", '/day' %> 
+                <%= link_to "See Info", "/day/#{day}" %>
               <% end %>
             <% end %>
           <% end %>

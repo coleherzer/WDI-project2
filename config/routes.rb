@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   # need to add routes for the days controller
 
-  get '/day' => 'days#show'
+  get '/day/:date' => 'days#show'
   
 end
