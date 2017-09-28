@@ -41,7 +41,10 @@
 
 <br />
 
+<!-- Go back and add a weight column to exercises so users can log how much weight they tossed around -->
+
 <h3>Exercises:</h3>
+<%= link_to "Add an Exercise", new_exercise_path %>
 <ul>
     <% @user.exercises.each do |e| %>
         <li><%= e.name_of_exercise %>
@@ -63,29 +66,36 @@
             </ul>
         </li>
     <% end %> 
-</ul>
-
-<%= link_to "Add an Exercise", new_exercise_path %> 
+</ul> 
 
 <br />
 
 <h3>Diet:</h3>
+<%= link_to "Add Dietary Information", new_diet_path %>
 <ul>
     <% @user.diets.each do |d| %>
         <li><%= d.meal_name %>
             <ul>
-                <li>Calories (If known): <%= d.calories %> calories</li>
-                <li>Healthy meal: <%= d.healthy %></li>
-                <li>Meal Description: <%= d.description %></li>
+                <li>Description: <%= d.description %></li>
+                <% if (d.calories != nil) %> 
+                    <li>Calories (If known): <%= d.calories %> calories</li>
+                <% end %> 
+                <% if (d.healthy != nil) %> 
+                    <li>Healthy Meal: 
+                        <%# if (d.healthy == true %> 
+                            <%# "Yes" %>
+                        <%# else %> 
+                            <%# "No" %> 
+                        <%# end %> </li>
+                <% end %> 
                 <li><%= link_to "Edit Meal", edit_diet_path(d.id) %></li>
             </ul>
         </li>
     <% end %> 
 </ul>
 
-<%= link_to "Add Dietary Information", new_diet_path %>
-
 <h3>Goals:</h3>
+<%= link_to "Add a Goal", new_goal_path %>
 <ul>
     <% @user.goals.each do |g| %>
         <li><%= g.goal_type %>
@@ -96,11 +106,8 @@
             </ul>
         </li>
     <% end %> 
-</ul>
+</ul> 
 
-<%= link_to "Add a Goal", new_goal_path %> 
-
-<br />
 <br />
 
 <%= link_to "Log Out", logout_path, method: "delete" %> 
