@@ -81,12 +81,11 @@
                     <li>Calories (If known): <%= d.calories %> calories</li>
                 <% end %> 
                 <% if (d.healthy != nil) %> 
-                    <li>Healthy Meal: 
-                        <%# if (d.healthy == true %> 
-                            <%# "Yes" %>
-                        <%# else %> 
-                            <%# "No" %> 
-                        <%# end %> </li>
+                    <% if (d.healthy == true) %>
+                        <li>Healthy Meal: Yes</li>
+                    <% else %> 
+                        <li>Healthy Meal: No</li>
+                    <% end %> 
                 <% end %> 
                 <li><%= link_to "Edit Meal", edit_diet_path(d.id) %></li>
             </ul>
@@ -101,7 +100,13 @@
         <li><%= g.goal_type %>
             <ul>
                 <li>Description: <%= g.description %></li>
-                <li>Goal Status: <%= g.completed %></li>
+                <% if (g.completed != nil) %> 
+                    <% if (g.completed == true) %>
+                        <li>Goal Status: Completed</li>
+                    <% else %> 
+                        <li>Goal Status: Incomplete</li>
+                    <% end %> 
+                <% end %> 
                 <li><%= link_to "Edit Goal", edit_goal_path(g.id) %></li>
             </ul>
         </li>
