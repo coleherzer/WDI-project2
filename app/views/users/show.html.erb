@@ -47,10 +47,18 @@
         <li><%= e.name_of_exercise %>
             <ul>
                 <li>Type of Exercise: <%= e.exercise_category %></li>
+                <% if (e.calories_burned != nil) %> 
                 <li>Calories Burned (If known): <%= e.calories_burned %> calories</li>
-                <li>Duration of Exercise: <%= e.duration %> minutes</li>
+                <% end %> 
+                <% if (e.duration != nil) %> 
+                    <li>Duration of Exercise: <%= e.duration %> minutes</li>
+                <% end %>
+                <% if (e.distance != nil) %> 
                 <li>Distance Traveled: <%= e.distance %> miles</li>
+                <% end %> 
+                <% if (e.repititions != nil) %> 
                 <li>Number of Repititions: <%= e.repititions %> reps</li>
+                <% end %> 
                 <li><%= link_to "Edit Exercise", edit_exercise_path(e.id) %></li>
             </ul>
         </li>

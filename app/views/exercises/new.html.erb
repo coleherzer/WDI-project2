@@ -1,18 +1,18 @@
 <h1>Add an Exercise to your page!</h1>
-<p>Enter 0 for categories that don't apply to the exercise!</p>
+<p>Leave sections blank if you don't know the information, or the information doesn't apply to your particular exercise!</p>
 
 <%= form_for @exercise do |f| %>
     <%= f.label :name_of_exercise, "Name of Exercise" %>
     <br />
-    <%= f.text_field :name_of_exercise %> 
+    <%= f.text_field :name_of_exercise, {placeholder: "Enter a name for the Exercise"} %> 
     <br />
     <%= f.label :exercise_category, "Type of Exercise (Ex: Cardio)" %>
     <br />
-    <%= f.text_field :exercise_category %> 
+    <%= f.text_field :exercise_category, {placeholder: "Exercise category"} %> 
     <br />
     <%= f.label :calories_burned, "Calories Burned (If known)" %>
     <br />
-    <%= f.number_field :calories_burned, {placeholder: ""} %> 
+    <%= f.number_field :calories_burned, {placeholder: "Known Calories Burned"} %> 
     <br />
     <%= f.label :duration, "Time spent doing Exercise" %>
     <br />
