@@ -23,7 +23,13 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &block) %>
               <% else %>
                 <% block.call day, sorted_events.fetch(day, []) %>
-                <%= link_to "See Info", "/day/#{day}" %>
+                <!-- need to add something here so that if there is content on that day
+                some sort of see info link appears
+                if not, then a dropdown button to add info is present -->
+                <%# if (day.include? ) %>
+                <% if sorted_events.fetch(day, []).count > 0 %>
+                  <%= link_to "See Info", "/day/#{day}", class: "info-link" %>
+                <% end %>
               <% end %>
             <% end %>
           <% end %>

@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .calendar-heading {
     text-align: center; 
@@ -58,6 +59,7 @@
 .day {
     height: 12rem;
     max-height: 12rem;  
+    font-size: 1.5rem; 
 }
 
 .day:hover {
@@ -75,4 +77,31 @@
 
 .user-name {
     margin-top: 2rem; 
+}
+
+.fa {
+    margin: .5rem; 
+}
+
+.fa-heartbeat {
+    color: red;
+    font-weight: bold; 
+    font-size: 1.5rem; 
+}
+
+.fa-star-o {
+    color: gold; 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+}
+
+.fa-cutlery {
+    font-weight: bold; 
+    font-size: 1.5rem; 
+}
+
+.info-link {
+    font-size: 1rem; 
+    // position: absolute;
+    // margin-top: 3rem;
 }

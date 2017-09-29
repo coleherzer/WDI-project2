@@ -9,7 +9,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @exercises = Exercise.all
+    # @exercises = Exercise.all
+
+    @exercises = @user.exercises
+    @diets = @user.diets
+    @goals = @user.goals
+
+    @events = @exercises + @diets + @goals
   end
 
   def new
