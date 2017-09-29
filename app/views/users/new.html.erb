@@ -1,41 +1,74 @@
-<div class="container">
-    <h1>Create a new account:</h1>
+<div id="create-account">
+    <div class="container">
 
-    <%= form_for @user do |f| %> 
-        <%= f.label :name, 'Name' %>
-        <br />
-        <%= f.text_field :name, {placeholder: "Enter Name"} %> 
-        <br />
-        <%= f.label :email, 'Email' %>
-        <br />
-        <%= f.text_field :email, {placeholder: "Enter Email"} %> 
-        <br />
-        <%= f.label :password, 'Password' %>
-        <br />
-        <%= f.password_field :password, {placeholder: "Enter Password"} %> 
-        <br />
-        <%= f.label :password_confirmation, "Confirm Password" %>
-        <br />
-        <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
-        <br />
-        <%= f.label :age, 'Age' %>
-        <br />
-        <%= f.number_field :age, {placeholder: "Enter Current Age"} %> 
-        <br />
-        <%= f.label :height, 'Height' %>
-        <br />
-        <%= f.number_field :height, {placeholder: "Enter current height"} %> 
-        <br />
-        <%= f.label :weight, 'Weight' %>
-        <br />
-        <%= f.number_field :weight, {placeholder: "Enter current weight"} %> 
-        <br />
-        <%= f.label :start_weight, 'Weight before you started working out' %>
-        <br />
-        <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
-        <br />
-        <%= f.submit "Create Account!" %> 
-    <% end %> 
+    <div class="form-group">
+    <div class="row">
+    <div class="col">
+        <!-- <h5>Let's Get Started!</h5>
+        <img src="https://goo.gl/UnpXdn" alt="Start Line"> -->
+
+    </div>
+
+    <div class="col">
+    <h1>Create a new account:</h1>
+    
+        <%= form_for @user do |f| %> 
+            <div class="form-group">
+            <%= f.label :name, 'Name' %>
+            <br />
+            <%= f.text_field :name, {placeholder: "Enter Name"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :email, 'Email' %>
+            <br />
+            <%= f.text_field :email, {placeholder: "name@example.com"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :password, 'Password' %>
+            <br />
+            <%= f.password_field :password, {placeholder: "Enter Password"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :password_confirmation, "Confirm Password" %>
+            <br />
+            <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :age, 'Age' %>
+            <br />
+            <%= f.number_field :age, {placeholder: "Enter Current Age"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :height, 'Height (inches)' %>
+            <br />
+            <%= f.number_field :height, {placeholder: "Enter current height"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :weight, 'Weight (lbs)' %>
+            <br />
+            <%= f.number_field :weight, {placeholder: "Enter current weight"} %> 
+            <br />
+            </div>
+            <div class="form-group">
+            <%= f.label :start_weight, 'Start Weight (lbs)' %>
+            <br />
+            <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
+            <br />
+            </div>
+            <%= f.submit "Create Account" %> 
+        <% end %> 
+        </div>
+
+    </div>
+    </div>
+
+</div>
 
     <!-- find a way to make it so instead of specifying their start weight, users current weight will
     be saved as their start weight automatically -->
