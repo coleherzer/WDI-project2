@@ -18,9 +18,33 @@
     color: white;
 }
 
+.prev-month .dropdown {
+    display: none; 
+}
+
+.prev-month i {
+    display: none; 
+}
+
+.prev-month a {
+    display: none; 
+}
+
 .next-month {
     background: #353535;
     color: white; 
+}
+
+.next-month .dropdown {
+    display: none; 
+}
+
+.next-month i {
+    display: none; 
+}
+
+.next-month a {
+    display: none; 
 }
 
 .navbar {
