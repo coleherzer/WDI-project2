@@ -1,3 +1,5 @@
+<% @user = current_user %>
+
 <div class="simple-calendar">
   <div class="calendar-heading">
     <%= link_to t('simple_calendar.previous', default: 'Previous Month'), calendar.url_for_previous_view %>
@@ -23,13 +25,9 @@
                 <% capture_haml(day, sorted_events.fetch(day, []), &block) %>
               <% else %>
                 <% block.call day, sorted_events.fetch(day, []) %>
-                <!-- need to add something here so that if there is content on that day
-                some sort of see info link appears
-                if not, then a dropdown button to add info is present -->
-                <%# if (day.include? ) %>
                 <% if sorted_events.fetch(day, []).count > 0 %>
                   <%= link_to "See Details", "/day/#{day}", class: "info-link" %>
-                <% else %>
+                <% elsif sorted_events.fetch(day, []).count == 0 %>
                   <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Add Info

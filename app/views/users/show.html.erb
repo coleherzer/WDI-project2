@@ -26,15 +26,15 @@
         <!-- set it up so that if exercise info exists... Display a little icon (same for diets and goals)
         use the same code but do and if exercises.count > 0 do ... and instead of creating a p, create an icon -->
         <br />
-        <% if (exercises.count > 0) %>
+        <% if (exercises.count > 0 && events.count > 0) %>
             <i class="fa fa-heartbeat" aria-hidden="true"></i>
         <% end %>
         <br />
-        <% if (diets.count > 0) %>
+        <% if (diets.count > 0 && events.count > 0) %>
             <i class="fa fa-cutlery" aria-hidden="true"></i>
         <% end %>
         <br />
-        <% if (goals.count > 0) %>
+        <% if (goals.count > 0 && events.count > 0) %>
             <i class="fa fa-star-o" aria-hidden="true"></i>
         <% end %>
         <br />
