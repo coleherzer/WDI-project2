@@ -29,6 +29,8 @@
                 <%# if (day.include? ) %>
                 <% if sorted_events.fetch(day, []).count > 0 %>
                   <%= link_to "See Info", "/day/#{day}", class: "info-link" %>
+                <% else %>
+                  <%= link_to "Add Info", new_exercise_path, class: "info-link" %> 
                 <% end %>
               <% end %>
             <% end %>

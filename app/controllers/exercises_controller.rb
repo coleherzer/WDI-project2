@@ -19,7 +19,7 @@ class ExercisesController < ApplicationController
     @exercise.weight = params[:exercise][:weight]
     @exercise.exercise_category = params[:exercise][:exercise_category]
     @exercise.calories_burned = params[:exercise][:calories_burned]
-    @exercise.time_done = params[:exercise][:time_done]
+    @exercise.on = params[:exercise][:on]
     @user = current_user
     @exercise.user = @user
     if @exercise.save
@@ -54,6 +54,6 @@ class ExercisesController < ApplicationController
 
   private
   def exercise_params
-    params.require(:exercise).permit(:name_of_exercise, :exercise_category, :duration, :distance, :repititions, :weight, :calories_burned, :time_done)
+    params.require(:exercise).permit(:name_of_exercise, :exercise_category, :duration, :distance, :repititions, :weight, :calories_burned, :on)
   end
 end

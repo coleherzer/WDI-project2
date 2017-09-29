@@ -17,11 +17,11 @@
         <%# date %>
     <%# end %> -->
 
-    <%= month_calendar attribute: :, events: @events do |date, events| %>
+    <%= month_calendar attribute: :on, events: @events do |date, events| %>
         <%= date.day %>
-        <% exercises = Exercise.where time_done: date %>
-        <% diets = Diet.where meal_time: date %>
-        <% goals = Goal.where due_date: date %>
+        <% exercises = Exercise.where on: date %>
+        <% diets = Diet.where on: date %>
+        <% goals = Goal.where on: date %>
 
         <!-- set it up so that if exercise info exists... Display a little icon (same for diets and goals)
         use the same code but do and if exercises.count > 0 do ... and instead of creating a p, create an icon -->
