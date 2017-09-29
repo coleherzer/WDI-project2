@@ -21,6 +21,12 @@ User Home Page
 
 --
 
+### ERD:
+
+![Imgur](https://i.imgur.com/wz7nOv6.png)
+
+--
+
 ### Technologies Used:
 - HTML
 - CSS
