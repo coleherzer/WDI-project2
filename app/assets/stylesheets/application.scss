@@ -142,7 +142,7 @@
     height: 100vh; 
 }
 
-.edit h1 {
+.edit h1, p {
     color: white; 
 }
 
@@ -184,4 +184,50 @@
 .img_fluid {
     max-width: 100%;
     height: auto; 
+}
+
+.exercise-new {
+    background: url(https://goo.gl/JeRSbK);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.exercise-new p {
+    color: black; 
+}
+
+.diet-new {
+    background: url(https://goo.gl/X87ob2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.diet-new p {
+    color: white; 
+}
+
+.diet-new h1 {
+    color: white; 
+}
+.diet-new label {
+    color: white; 
+}
+
+.goal-new {
+    background: url(https://goo.gl/iE4JHC);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.user-calendar-page p {
+    color: black; 
 }
