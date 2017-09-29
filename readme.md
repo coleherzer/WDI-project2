@@ -2,6 +2,8 @@
 
 ##### Project link: 
 
+[Health Tracker](https://coleherzer-wdi-project2.herokuapp.com/)
+
 --
 
 ### Overview: 
@@ -31,20 +33,25 @@ I started out with the desire to build Health Log, with some basic features that
 --
 
 ### Installation/Start Up:
-
-
+Head to the project link at the start of the readme to acces Health Tracker!
 
 --
 
 ### Unresolved Problems:
+- Still need to work on styling
+- Still need to add some bonus features
+- No major unresolved problems
 
 --
 
 ### Next Steps:
+- Add a forum section where users can go to ask questions and comment on each other's posts
+- Add ability for users to set reminders for goals
 
 --
 
 ##### Trello Link: 
+[https://trello.com/b/Dh3BWAB5/wdi-project-2](https://trello.com/b/Dh3BWAB5/wdi-project-2)
 
 --
 
