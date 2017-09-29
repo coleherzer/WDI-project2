@@ -28,9 +28,18 @@
                 if not, then a dropdown button to add info is present -->
                 <%# if (day.include? ) %>
                 <% if sorted_events.fetch(day, []).count > 0 %>
-                  <%= link_to "See Info", "/day/#{day}", class: "info-link" %>
+                  <%= link_to "See Details", "/day/#{day}", class: "info-link" %>
                 <% else %>
-                  <%= link_to "Add Info", new_exercise_path, class: "info-link" %> 
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Add Info
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <%= link_to "Add Exercise", new_exercise_path, class: "info-link dropdown-item" %> 
+                      <%= link_to "Add Meal", new_diet_path, class: "info-link dropdown-item" %> 
+                      <%= link_to "Add Goal", new_goal_path, class: "info-link dropdown-item" %> 
+                    </div>
+                  </div>
                 <% end %>
               <% end %>
             <% end %>
