@@ -235,3 +235,13 @@
 .user-calendar-page p {
     color: black; 
 }
+
+.days-show {
+    background: url(https://goo.gl/1dA9zG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    // need to go back and make height cover the entire length of the screen
+}
