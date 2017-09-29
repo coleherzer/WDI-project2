@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  helper_method :current_user, :logged_in?, :authorize
+  helper_method :current_user, :logged_in?, :authorize, :match_user
   # want to be able to use these in your views templates
 
 
@@ -18,6 +18,14 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       flash[:danger] = "You must be logged in to view that... Please log in."
       redirect_to new_session_path unless logged_in?
+    end
+  end
+  #make it so that a user can't access certain content unless they be logged in
+
+  def match_user 
+    unless current_user.id == params[:id].to_i
+      flash[:danger] = "That user's information is private..."
+      redirect_to user_path(current_user)
     end
   end
   #make it so that a user can't access certain content unless they be logged in

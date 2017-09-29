@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authorize, only: [:show, :edit, :update, :destroy]
   # is there a way I can add in current_user or something after each of the above routes
   # so that the user is only authorized for the routes that match their ID?
+  before_action :match_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @user = User.all
