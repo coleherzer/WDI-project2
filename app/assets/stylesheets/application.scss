@@ -134,7 +134,28 @@
 // but nothing else)
 
 .edit {
+    background: url(https://goo.gl/9ubuus);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh; 
+}
 
+.edit h1 {
+    color: white; 
+}
+
+.edit label {
+    color: white; 
+}
+
+.user-edit-info {
+    padding-top: 4rem;
+}
+
+.user-edit-info2 {
+    padding-top: 4rem;
 }
 
 #create-account {
@@ -158,4 +179,9 @@
 .new-session {
     margin-top: 10rem; 
     margin-left: 8rem; 
+}
+
+.img_fluid {
+    max-width: 100%;
+    height: auto; 
 }
