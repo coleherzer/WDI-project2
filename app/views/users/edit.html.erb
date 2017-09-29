@@ -1,9 +1,8 @@
 <div class="edit img-fluid">
 
     <div class="container">
-        <div class="form-group">
-            <div class="row user-edit-info">
-            <div class="col">
+        <div class="row user-edit-info">
+            <div class="form-group">
             <h1>Edit Personal Info:</h1>
             <%= form_for @user do |f| %> 
                 <%= f.label :name, 'Name' %>
@@ -57,10 +56,11 @@
             <div class="col">
                     
             </div>
-            </div>
-            <%= f.submit "Update Information" %> 
-            <% end %> 
         </div>
+        <%= f.submit "Update Information" %> 
+        <% end %> 
+
+        <br />
 
         <%= link_to "Cancel", user_path(@user) %> 
 
