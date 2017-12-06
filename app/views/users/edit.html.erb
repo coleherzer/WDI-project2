@@ -1,74 +1,101 @@
-<div class="container">
-    <div class="row">
-        <h1>Edit Personal Info:</h1>
-    </div>
-    <div class="row">
-        <div class="col-4">
-        <%= form_for @user do |f| %> 
-            <div class="row">
-            <%= f.label :name, 'Name' %>
+<div class="edit-profile">    
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+
             </div>
-            <div class="row user-edit-field">
-            <%= f.text_field :name, {placeholder: @user.name} %> 
+            <div class="col-6 center">
+                <h1>Edit Personal Info:</h1>
             </div>
-            <div class="row">
-            <%= f.label :email, 'Email' %>
+            <div class="col-2">
+
             </div>
-            <div class="row">
-            <%= f.text_field :email, {placeholder: @user.email} %> 
-            </div>
-            <div class="row">
-            <%= f.label :password, 'Change Password' %>
-            </div>
-            <div class="row">
-            <%= f.password_field :password, {placeholder: "Change Password"} %> 
-            </div>
-            <div class="row">
-            <%= f.label :password_confirmation, "Confirm Password" %>
-            </div>
-            <div class="row">
-            <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
-            </div>
-            <div class="row">
-            <%= f.label :age, 'Age' %>
-            </div>
-            <div class="row">
-            <%= f.number_field :age, {placeholder: @user.age} %>
-            </div>
-            <div class="row"> 
-            <%= f.label :height, 'Height (Inches)' %>
-            </div>
-            <div class="row">
-            <%= f.number_field :height, {placeholder: "Enter your current height"} %> 
-            </div>
-            <div class="row">
-            <%= f.label :weight, 'Weight (lbs)' %>
-            </div>
-            <div class="row">
-            <%= f.number_field :weight, {placeholder: "Enter your current weight"} %> 
-            </div>
-            <div class="row">
-            <%= f.label :start_weight, 'Start Weight (lbs)' %>
-            </div>
-            <div class="row">
-            <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
-            </div>
-            <div class="row">
-            <%= f.submit "Update Information" %> 
-            </div>
-        <% end %> 
         </div>
-        <div class="col-8">
+        <div class="row">
+            <div class="col-4">
             
+            </div>
+            <div class='col-4'>
+                <%= form_for @user do |f| %> 
+                <div class="row">
+                    <%= f.label :name, 'Name' %>
+                </div>
+                <div class="row user-edit-field">
+                    <%= f.text_field :name, {placeholder: @user.name} %> 
+                </div>
+                <div class="row">
+                    <%= f.label :email, 'Email' %>
+                </div>
+                <div class="row user-edit-field">
+                    <%= f.text_field :email, {placeholder: @user.email} %> 
+                </div>
+                <div class="row">
+                    <%= f.label :password, 'Change Password' %>
+                </div>
+                <div class="row user-edit-field">
+                    <%= f.password_field :password, {placeholder: "Change Password"} %> 
+                </div>
+                <div class="row">
+                    <%= f.label :password_confirmation, "Confirm Password" %>
+                </div>
+                <div class="row user-edit-field">
+                    <%= f.password_field :password_confirmation, {placeholder: "Confirm Password"} %>
+                </div>
+            </div>
+            <div class="col-4">
+                    <div class="row">
+                        <%= f.label :age, 'Age' %>
+                    </div>
+                    <div class="row user-edit-field">
+                        <%= f.number_field :age, {placeholder: @user.age} %>
+                    </div>
+                    <div class="row"> 
+                        <%= f.label :height, 'Height (Inches)' %>
+                    </div>
+                    <div class="row user-edit-field">
+                        <%= f.number_field :height, {placeholder: "Enter your current height"} %> 
+                    </div>
+                    <div class="row">
+                        <%= f.label :weight, 'Weight (lbs)' %>
+                    </div>
+                    <div class="row user-edit-field">
+                        <%= f.number_field :weight, {placeholder: "Enter your current weight"} %> 
+                    </div>
+                    <div class="row">
+                        <%= f.label :start_weight, 'Start Weight (lbs)' %>
+                    </div>
+                    <div class="row user-edit-field">
+                        <%= f.number_field :start_weight, {placeholder: "Start Weight"} %> 
+                    </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-6 center top-spacing">
+                <%= f.submit "Update Information" %> 
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        <% end %>
+
+        <br />
+
+        <div class="row">
+            <div class="col-8">
+
+            </div>
+            <div class="col-4">
+                    <%= link_to "Cancel", user_path(@user) %> 
+                    
+                    <br />
+                    
+                    <%= link_to "Delete Account", user_path, method: 'delete' %> 
+            </div>
+        </div>
+
     </div>
-
-    <br />
-
-    <%= link_to "Cancel", user_path(@user) %> 
-
-    <br />
-
-    <%= link_to "Delete Account", user_path, method: 'delete' %> 
-
 </div>
